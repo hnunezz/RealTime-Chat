@@ -1,0 +1,35 @@
+<main>
+  <section>
+    <h2> Hello, {{ registerForm.controls['name'].value || 'User'}}! 🎉</h2>
+    <form [formGroup]="registerForm">
+      <input
+        type="text"
+        placeholder="Name"
+        formControlName="name"
+      >
+      <input
+        type="email"
+        placeholder="E-mail"
+        formControlName="email"
+      >
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        (ngModelChange)="onPasswordChange($event)"
+      >
+
+      <progress class="color-{{passwordStrengthValue}}" [value]="passwordStrengthValue" max="100"></progress>
+
+      <button
+        type="submit"
+        [disabled]="!(registerForm.valid && passwordStrengthValue == 100)"
+      >
+        Register
+      </button>
+
+      <small>Login</small>
+    </form>
+  </section>
+</main>

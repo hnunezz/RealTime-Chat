@@ -1,0 +1,28 @@
+<main>
+  <section>
+    <h2> Welcome! 🎉</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmitLogin()">
+      <!-- campo oculto com um token único por usuário -->
+      <!-- <input
+        type="hidden"
+        [value]="csrfTokenService.getToken"
+        name="_csrf"
+      > -->
+
+      <input
+        type="email"
+        placeholder="E-mail"
+        formControlName="email"
+      >
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      >
+
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+
+      <small>Register</small>
+    </form>
+  </section>
+</main>

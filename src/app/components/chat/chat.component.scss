@@ -1,0 +1,79 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  section {
+    background: #202024;
+    width: clamp(400px, 90%, 800px);
+    height: 85%;
+    border-radius: 8px;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      ".";
+
+    div.chat {
+      background-color: #202024;
+    }
+
+    footer {
+      background-color: #1212144d;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 18px;
+      grid-template-areas: ". .";
+
+      div.form {
+        width: 100%;
+        position: relative;
+
+        input {
+          transition: ease-out 0.3s;
+          width: calc(100% - 18px);
+          outline: none;
+          height: 30px;
+          padding-left: 10px;
+          border-radius: 8px;
+          color: white;
+          background: rgb(18, 18, 20);
+          border: solid;
+          border-color: rgb(18, 18, 20);
+          font-size: 16px;
+
+          &:focus,
+          &:target {
+            transition: ease 0.3s;
+            border: solid;
+            border-color: #8234e9;
+          }
+        }
+      }
+
+      div.actions {
+        button {
+          height: 30px;
+          width: 30px;
+          border-radius: 30px;
+          outline: none;
+          border: 0;
+          background: #8234e9;
+        }
+      }
+    }
+  }
+}
