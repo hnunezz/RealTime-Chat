@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Stomp } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
-import { ChatMessage } from '../models/chat-message';
+import { ChatMessage } from '../models/interfaces/chat-message';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({

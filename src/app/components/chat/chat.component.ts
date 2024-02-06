@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ChatService } from '../../services/chat.service';
-import { ChatMessage } from '../../models/chat-message';
+import { ChatMessage } from '../../models/interfaces/chat-message';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';

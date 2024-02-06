@@ -1,0 +1,20 @@
+input {
+  transition: ease-out 0.3s;
+  width: 80%;
+  outline: none;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: white;
+  background: rgb(18, 18, 20);
+  border: solid;
+  border-color: rgb(18, 18, 20);
+  font-size: 16px;
+
+  &:focus,
+  &:target {
+    transition: ease 0.3s;
+    border: solid;
+    border-color: #8234e9;
+  }
+}
