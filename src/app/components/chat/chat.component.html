@@ -1,18 +1,37 @@
 <main>
   <section>
     <div class="chat">
-aa
+      <ul>
+        @for (item of messageList; track $index) {
+          <li [class]="item._side">
+            <div class="message">
+              <p>
+                {{ item.message }}
+              </p>
+            </div>
+
+            <div class="triangle"></div>
+            <div class="userIcon">
+              <strong> HN </strong>
+            </div>
+          </li>
+        }
+      </ul>
     </div>
     <footer>
       <div class="form">
         <input
           type="text"
           placeholder="Write here.."
+          [(ngModel)]="message"
         >
       </div>
 
       <div class="actions">
-        <button></button>
+        <button
+          (click)="sendMessage()"
+          [disabled]="!message"
+        ></button>
       </div>
     </footer>
   </section>

@@ -22,6 +22,86 @@ main {
 
     div.chat {
       background-color: #202024;
+
+      ul {
+        list-style: none;
+        margin-block: 0;
+        margin-inline: 0;
+        padding-inline: 0;
+        margin: 0 70px;
+
+        li {
+          padding: 30px 0;
+          width: 100%;
+          display: flex;
+          position: relative;
+
+          &.sender {
+            --color: #8234e9;
+            --right: -10px;
+            justify-content: flex-end;
+
+            div.triangle {
+              right: var(--right);
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid var(--color);
+            }
+
+            div.userIcon {
+              right: -60px;
+            }
+          }
+
+          &.receiver {
+            --color: #e934da;
+            --left: -10px;
+
+            justify-content: flex-start;
+
+            div.triangle {
+              left: var(--left);
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-right: 10px solid var(--color);
+            }
+
+            div.userIcon {
+              left: -60px;
+            }
+          }
+
+          div.triangle {
+            position: absolute;
+            bottom: 60px;
+            width: 0;
+            height: 0;
+          }
+
+          div.userIcon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: #454545;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          div.message {
+            background: var(--color);
+            width: 60%;
+            min-height: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            p {
+              margin-block: 0px;
+            }
+          }
+        }
+      }
     }
 
     footer {
